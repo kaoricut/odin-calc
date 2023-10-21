@@ -74,10 +74,42 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: inherit;
   width: 62px;
   height: 62px;
+  border: 0;
+  border-radius: 16px;
   font-size: 32px;
   font-weight: 500;
+  transition: all .2s ease-in;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--col-accent-light);
+}
+
+.btn:active {
+  background: var(--col-accent-light);
+  transform: scale(0.95);
+}
+
+.btn_number {
+  background: var(--btn-bg-white);
+  color: var(--text-col-light);
+}
+
+.btn_del {
+  background: var(--btn-bg-white);
+  color: var(--col-grey);
+}
+
+.btn_control {
+  background: var(--col-accent-light);
+}
+
+.btn_equal {
+  background: var(--col-accent);
 }
 
 .calc__btn_lg {
