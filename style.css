@@ -1,0 +1,85 @@
+html {
+  box-sizing: border-box;
+
+  --main-bg: #daf0ff;
+  --calc-bg: #f7f8fb;
+  --btn-bg-white: #ffffff;
+  --fs-regular: 32px;
+  --fs-large: 48px;
+  --text-col-dark: #424242;
+  --text-col-light: #38b9ff;
+  --col-grey: #858585;
+  --col-accent: #19acff;
+  --col-accent-light: #ade2ff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background-color: var(--main-bg);
+}
+
+.calc {
+  width: 375px;
+  padding: 34px;
+  background-color: var(--calc-bg);
+  border-radius: 39px;
+}
+
+.calc__display {
+  padding: 44px 0;
+  font-size: 48px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.calc__controls {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 20px;
+  row-gap: 16px;
+}
+
+.calc__row {
+  display: flex;
+  gap: 20px;
+}
+
+.calc__col {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  grid-column: 2;
+  grid-row: 1 / 6;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.calc__btn_lg {
+  flex: 2;
+}
