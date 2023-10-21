@@ -50,6 +50,11 @@ body {
   text-align: right;
 }
 
+.calc__display-text {
+  display: inline-block;
+  height: 48px;
+}
+
 .calc__controls {
   display: grid;
   grid-template-columns: 3fr 1fr;

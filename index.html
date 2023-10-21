@@ -12,47 +12,49 @@
 <body>
   <main class="main">
     <div class="calc">
-      <div class="calc__display js-display">12454</div>
+      <div class="calc__display">
+        <span class="calc__display-text js-display"></span>
+      </div>
       <div class="calc__controls">
         <div class="calc__row">
           <button class="btn calc__btn btn_del">Ac</button>
           <button class="btn calc__btn btn_del">
             <img class="btn__icon" src="./images/backspace.svg" alt="Backspace">
           </button>
-          <button class="btn calc__btn btn_control">
+          <button class="btn calc__btn btn_control js-operator" data-value="/">
             <img class="btn__icon" src="./images/divide.svg" alt="Divide">
           </button>
         </div>
         <div class="calc__row">
-          <button class="btn calc__btn btn_number">7</button>
-          <button class="btn calc__btn btn_number">8</button>
-          <button class="btn calc__btn btn_number">9</button>
+          <button class="btn calc__btn btn_number js-number" data-value="7">7</button>
+          <button class="btn calc__btn btn_number js-number" data-value="8">8</button>
+          <button class="btn calc__btn btn_number js-number" data-value="9">9</button>
         </div>
         <div class="calc__row">
-          <button class="btn calc__btn btn_number">4</button>
-          <button class="btn calc__btn btn_number">5</button>
-          <button class="btn calc__btn btn_number">6</button>
+          <button class="btn calc__btn btn_number js-number" data-value="4">4</button>
+          <button class="btn calc__btn btn_number js-number" data-value="5">5</button>
+          <button class="btn calc__btn btn_number js-number" data-value="6">6</button>
         </div>
         <div class="calc__row">
-          <button class="btn calc__btn btn_number">1</button>
-          <button class="btn calc__btn btn_number">2</button>
-          <button class="btn calc__btn btn_number">3</button>
+          <button class="btn calc__btn btn_number js-number" data-value="1">1</button>
+          <button class="btn calc__btn btn_number js-number" data-value="2">2</button>
+          <button class="btn calc__btn btn_number js-number" data-value="3">3</button>
         </div>
         <div class="calc__row">
-          <button class="btn calc__btn calc__btn_lg btn_number">0</button>
-          <button class="btn calc__btn btn_number">.</button>
+          <button class="btn calc__btn calc__btn_lg btn_number js-number" data-value="0">0</button>
+          <button class="btn calc__btn btn_number" data-value=".">.</button>
         </div>
         <div class="calc__col">
-          <button class="btn calc__btn btn_control">
+          <button class="btn calc__btn btn_control js-operator" data-value="*">
             <img class="btn__icon" src="./images/multiply.svg" alt="Multiply">
           </button>
-          <button class="btn calc__btn btn_control">
+          <button class="btn calc__btn btn_control js-operator" data-value="-">
             <img class="btn__icon" src="./images/minus.svg" alt="Minus">
           </button>
-          <button class="btn calc__btn calc__btn_lg btn_control">
+          <button class="btn calc__btn calc__btn_lg btn_control js-operator" data-value="+">
             <img class="btn__icon" src="./images/plus.svg" alt="Plus">
           </button>
-          <button class="btn calc__btn calc__btn_lg btn_equal">
+          <button class="btn calc__btn calc__btn_lg btn_equal js-equal">
             <img class="btn__icon" src="./images/equal.svg" alt="Equal">
           </button>
         </div>
