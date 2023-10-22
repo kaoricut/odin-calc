@@ -34,11 +34,25 @@ equalButton.addEventListener("click", () => {
 });
 
 function populateDisplay(value) {
+  if (value === Infinity) {
+    clearCalculator();
+    calcDisplay.textContent = "Error!";
+    return;
+  }
+
   if (!displayValue) {
     calcDisplay.textContent = "";
   }
   calcDisplay.textContent += value;
   storeDisplayValue();
+}
+
+function clearCalculator() {
+  displayValue = null;
+  firstOperand = null;
+  secondOperand = null;
+  operator = null;
+  calcDisplay.textContent = "";
 }
 
 function storeDisplayValue() {
