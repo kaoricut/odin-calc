@@ -55,8 +55,13 @@ function populateDisplay(value) {
   if (!displayValue) {
     calcDisplay.textContent = "";
   }
-  calcDisplay.textContent += value;
-  storeDisplayValue();
+
+  if (calcDisplay.textContent.length >= 10) {
+    return;
+  } else {
+    calcDisplay.textContent += value;
+    storeDisplayValue();
+  }
 }
 
 function clearCalculator() {
