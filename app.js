@@ -29,6 +29,9 @@ operatorButtons.forEach(button => {
 });
 
 equalButton.addEventListener("click", () => {
+  if (!firstOperand && typeof firstOperand === "undefined") {
+    return;
+  }
   storeSecondOperand();
   nullifyDisplayValue();
   populateDisplay(operate(firstOperand, secondOperand, operator));
