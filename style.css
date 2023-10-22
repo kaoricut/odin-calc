@@ -47,7 +47,8 @@ body {
   padding: 44px 0;
   font-size: 48px;
   font-weight: 500;
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .calc__display-text {
