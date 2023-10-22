@@ -16,6 +16,11 @@ numberButtons.forEach(button => {
 
 operatorButtons.forEach(button => {
   button.addEventListener("click", () => {
+    if (operator) {
+      storeSecondOperand();
+      nullifyDisplayValue();
+      populateDisplay(operate(firstOperand, secondOperand, operator));
+    }
     storeOperator(button.dataset.value);
     storeFirstOperand();
     nullifyDisplayValue();
@@ -42,6 +47,10 @@ function storeDisplayValue() {
 
 function nullifyDisplayValue() {
   displayValue = null;
+}
+
+function nullifyOperator() {
+  operator = null;
 }
 
 function storeFirstOperand() {
