@@ -21,6 +21,8 @@ operatorButtons.forEach(button => {
       storeSecondOperand();
       nullifyDisplayValue();
       populateDisplay(operate(firstOperand, secondOperand, operator));
+      nullifySecondOperand();
+      nullifyOperator();
     }
     storeOperator(button.dataset.value);
     storeFirstOperand();
@@ -35,6 +37,8 @@ equalButton.addEventListener("click", () => {
   storeSecondOperand();
   nullifyDisplayValue();
   populateDisplay(operate(firstOperand, secondOperand, operator));
+  nullifySecondOperand();
+  nullifyOperator();
 });
 
 clearButton.addEventListener("click", () => {
@@ -83,6 +87,10 @@ function storeSecondOperand() {
   secondOperand = displayValue;
 }
 
+function nullifySecondOperand() {
+  secondOperand = null;
+}
+
 function storeOperator(value) {
   operator = value;
 }
@@ -105,7 +113,7 @@ function operate(a, b, operator) {
       break;
   }
 
-  return result;
+  return Math.round(result * 100) / 100;
 }
 
 function add(a, b) {
