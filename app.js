@@ -2,6 +2,7 @@ const calcDisplay = document.querySelector(".js-display");
 const numberButtons = document.querySelectorAll(".js-number");
 const operatorButtons = document.querySelectorAll(".js-operator");
 const equalButton = document.querySelector(".js-equal");
+const clearButton = document.querySelector(".js-clear");
 
 let displayValue;
 let firstOperand;
@@ -31,6 +32,10 @@ equalButton.addEventListener("click", () => {
   storeSecondOperand();
   nullifyDisplayValue();
   populateDisplay(operate(firstOperand, secondOperand, operator));
+});
+
+clearButton.addEventListener("click", () => {
+  clearCalculator();
 });
 
 function populateDisplay(value) {
